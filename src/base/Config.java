@@ -12,21 +12,30 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 public class Config extends WDFunctions {
-
+	
 	@BeforeSuite
-	public void startTestSuite(){
+	public void startTestSuite() {
 		getCurrentTime();
-		}
+	}
+    
+	@Parameters("browser")
 	@BeforeMethod
-	public void beforeEachTestMethod(){
-		// Init the browser
-		System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"/drivers/chromedriver");
-		//System.setProperty("webdriver.chrome.driver","./drivers/chromedriver");
-		driver = new ChromeDriver();
+	public void beforeEachTestMethod(String browser) {
+		if (browser.equalsIgnoreCase("ch")) {
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir") + "/drivers/chromedriver");
+			driver = new ChromeDriver();
+			System.out.println(" chrome driver open ++++++++++++++++ ");
+		} 
+		/*else if (browser.equalsIgnoreCase("ff")) {
+			System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver ");
+			driver = new FirefoxDriver(); 
+			System.out.println (" Firefox driver open ++++++++++++++++ ");
+		}*/
+	
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
-		System.out.println (" chrome driver open ++++++++++++++++ ");
+		
 		// open browser	
 		driver.get("https://www.yahoo.com/");
 	}

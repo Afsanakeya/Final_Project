@@ -75,8 +75,8 @@
 
     <!-- run -->
     <target name="run" depends="compile">
-        <testng classpath="${test.classpath}:${test.dest}" suitename="talentTEK">	
-              	<xmlfileset dir="${ws.home}" includes="testng.xml"/>
+        <testng classpath="${test.classpath}:${test.dest}" suitename="yahoo Test">	
+              	<xmlfileset dir="${ws.home}" includes="Successfully_sent_mail.xml"/>
         	
    
      <!-- <xmlfileset dir="${ws.home}" includes="testngCh.xml"/>
