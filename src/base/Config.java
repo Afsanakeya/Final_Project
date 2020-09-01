@@ -12,12 +12,12 @@ import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 public class Config extends WDFunctions {
-	
+
 	@BeforeSuite
 	public void startTestSuite() {
 		getCurrentTime();
 	}
-    
+
 	@Parameters("browser")
 	@BeforeMethod
 	public void beforeEachTestMethod(String browser) {
@@ -31,27 +31,27 @@ public class Config extends WDFunctions {
 			driver = new FirefoxDriver(); 
 			System.out.println (" Firefox driver open ++++++++++++++++ ");
 		}*/
-	
+
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
 		driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
-		
+
 		// open browser	
 		driver.get("https://www.yahoo.com/");
 	}
-		
-		
-		@AfterMethod
-		public void afterEachTestMethod(){
-			// close browser
-			driver.close();
-			System.out.println (" Test is ended and browser is closeded +++++++ ");
-		}
-		
-		@AfterSuite
-		public void tearDown(){
-			driver.quit();
-			System.out.println (" Terminated WD +++++++ ");
-		}
+
+
+	@AfterMethod
+	public void afterEachTestMethod(){
+		// close browser
+		driver.close();
+		System.out.println (" Test is ended and browser is closeded +++++++ ");
+	}
+
+	@AfterSuite
+	public void tearDown(){
+		driver.quit();
+		System.out.println (" Terminated WD +++++++ ");
+	}
 }
-	
+

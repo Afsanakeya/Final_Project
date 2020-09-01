@@ -84,34 +84,9 @@ public class WDFunctions {
 		driver.findElement(By.linkText(loc)).click();
 	}
 
-	//Read text file
-	/*public void write_email() {
-		File inFile = new File("./mail.txt");
-		StringBuilder targetString = new StringBuilder("");
-		try {
-			FileReader fr = new FileReader(inFile);
-			BufferedReader br = new BufferedReader(fr);
-
-			String s = null;
-			while ((s = br.readLine()) != null) {
-				targetString.append(s);
-			}
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
-		try {
-			driver.findElement(By.xpath("//*[@id=\"editor-container\"]/div[1]")).sendKeys(targetString);
-
-			System.out.println("Email Successfully Composed");
-		}
-		catch(Exception e) {
-			System.out.println("Unbale to find the element and unable to compose email"+e);
-		}
-	}*/
-	
 	public static final String FilePath  = "./mail.txt";
 	public static final StringBuilder st = readfile(FilePath);
-    public static StringBuilder readfile(String filePath) {
+	public static StringBuilder readfile(String filePath) {
 		File inFile = new File(filePath);
 		StringBuilder DatafromDataSheet = new StringBuilder("");
 		try {
