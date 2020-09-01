@@ -19,7 +19,7 @@ public class locators_values {
 		public String delete_loc            ="//*[@id=\"app\"]/div[7]/div/div[1]/div/div/ul/li[9]/a/span";
 		public String page_title_loc        ="//*[@id=\"ybar-logo\"]/img[2]";
 		public String successfully_mail_sent="//*[@id=\"app\"]/div[5]/div/div/div/div[2]";
-		public String Email_compose_field   ="//*[@id=\\\"editor-container\\\"]/div[1]";
+		public String Email_compose_field   ="//*[@role='textbox']";
 		public String file_path_emaildata_sheet="./mail.txt";
 		public String Conversation_deleted  ="//*[@id=\"app\"]/div[5]/div/div/div/div[2]";
 		// all the values -- test data, name, email, password

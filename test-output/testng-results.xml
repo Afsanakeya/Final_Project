@@ -2,16 +2,16 @@
 <testng-results skipped="0" failed="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="yahoo.com - Smoke_Test" duration-ms="18352" started-at="2020-08-30T16:07:09Z" finished-at="2020-08-30T16:07:27Z">
+  <suite name="yahoo.com - Smoke_Test" duration-ms="27131" started-at="2020-09-01T01:24:51Z" finished-at="2020-09-01T01:25:19Z">
     <groups>
     </groups>
-    <test name="Running Smoke suite in chrome" duration-ms="18352" started-at="2020-08-30T16:07:09Z" finished-at="2020-08-30T16:07:27Z">
+    <test name="Running Smoke suite in chrome" duration-ms="27131" started-at="2020-09-01T01:24:51Z" finished-at="2020-09-01T01:25:19Z">
       <class name="Test_Cases.Successfully_sent_mail_test$Sign_in_test">
-        <test-method status="PASS" signature="startTestSuite()[pri:0, instance:Test_Cases.Successfully_sent_mail_test$Sign_in_test@6328d34a]" name="startTestSuite" is-config="true" duration-ms="41" started-at="2020-08-30T12:07:09Z" finished-at="2020-08-30T12:07:09Z">
+        <test-method status="PASS" signature="startTestSuite()[pri:0, instance:Test_Cases.Successfully_sent_mail_test$Sign_in_test@6328d34a]" name="startTestSuite" is-config="true" duration-ms="21" started-at="2020-08-31T21:24:51Z" finished-at="2020-08-31T21:24:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- startTestSuite -->
-        <test-method status="PASS" signature="beforeEachTestMethod(java.lang.String)[pri:0, instance:Test_Cases.Successfully_sent_mail_test$Sign_in_test@6328d34a]" name="beforeEachTestMethod" is-config="true" duration-ms="5588" started-at="2020-08-30T12:07:09Z" finished-at="2020-08-30T12:07:14Z">
+        <test-method status="PASS" signature="beforeEachTestMethod(java.lang.String)[pri:0, instance:Test_Cases.Successfully_sent_mail_test$Sign_in_test@6328d34a]" name="beforeEachTestMethod" is-config="true" duration-ms="4471" started-at="2020-08-31T21:24:52Z" finished-at="2020-08-31T21:24:56Z">
           <params>
             <param index="0">
               <value>
@@ -22,15 +22,15 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeEachTestMethod -->
-        <test-method status="PASS" signature="Sucessfully_sent_mail_Test()[pri:0, instance:Test_Cases.Successfully_sent_mail_test$Sign_in_test@6328d34a]" name="Sucessfully_sent_mail_Test" duration-ms="12529" started-at="2020-08-30T12:07:14Z" finished-at="2020-08-30T12:07:27Z">
+        <test-method status="PASS" signature="Sucessfully_sent_mail_Test()[pri:0, instance:Test_Cases.Successfully_sent_mail_test$Sign_in_test@6328d34a]" name="Sucessfully_sent_mail_Test" duration-ms="22429" started-at="2020-08-31T21:24:56Z" finished-at="2020-08-31T21:25:18Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Sucessfully_sent_mail_Test -->
-        <test-method status="PASS" signature="afterEachTestMethod()[pri:0, instance:Test_Cases.Successfully_sent_mail_test$Sign_in_test@6328d34a]" name="afterEachTestMethod" is-config="true" duration-ms="227" started-at="2020-08-30T12:07:27Z" finished-at="2020-08-30T12:07:27Z">
+        <test-method status="PASS" signature="afterEachTestMethod()[pri:0, instance:Test_Cases.Successfully_sent_mail_test$Sign_in_test@6328d34a]" name="afterEachTestMethod" is-config="true" duration-ms="215" started-at="2020-08-31T21:25:18Z" finished-at="2020-08-31T21:25:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterEachTestMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Cases.Successfully_sent_mail_test$Sign_in_test@6328d34a]" name="tearDown" is-config="true" duration-ms="16" started-at="2020-08-30T12:07:27Z" finished-at="2020-08-30T12:07:27Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:Test_Cases.Successfully_sent_mail_test$Sign_in_test@6328d34a]" name="tearDown" is-config="true" duration-ms="118" started-at="2020-08-31T21:25:19Z" finished-at="2020-08-31T21:25:19Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->

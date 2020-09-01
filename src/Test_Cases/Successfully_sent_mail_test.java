@@ -10,6 +10,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.Config;
+import base.WDFunctions;
 import page_helper.locators_values;
 import run_code.run_codes;
 
@@ -20,7 +21,7 @@ public class Successfully_sent_mail_test {
 		@Test
 		public void Sucessfully_sent_mail_Test() throws InterruptedException {
 			System.out.println("Sucessfully sent mail Test Start");
-
+            Thread.sleep(2000);
 			clickByXpath(loc.signInLinkLoc)	;
 			typeByXpath(loc.emailLoc, loc.emailValue);
 			Thread.sleep(2000);
@@ -31,13 +32,13 @@ public class Successfully_sent_mail_test {
 			clickByXpath(loc.maillinkloc);
 			Thread.sleep(1000);
 			clickByXpath(loc.Composelink);
-			Thread.sleep(1000);
-			write_email();
-			typeByXpath(loc.To_link,loc.writeTolink);
+			Thread.sleep(9000);
+			sendKeyForDataFromDataFile(loc.Email_compose_field,WDFunctions.st);
+		    typeByXpath(loc.To_link,loc.writeTolink);
 			Thread.sleep(1000);
 			typeByXpath(loc.Subject_link,loc.writesublink);
 			Thread.sleep(1000);
-			write_email();
+			
 			clickByXpath(loc.Send_button);
 			String act = driver.findElement(By.xpath(loc.successfully_mail_sent)).getText(); 
 			// act is coming from Domain -- the one developer build and release

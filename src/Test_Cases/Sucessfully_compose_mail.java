@@ -11,6 +11,7 @@ import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import base.Config;
+import base.WDFunctions;
 import page_helper.locators_values;
 
 public class Sucessfully_compose_mail {
@@ -35,7 +36,7 @@ public class Sucessfully_compose_mail {
 			Thread.sleep(1000);
 			typeByXpath(loc.Subject_link,loc.writesublink);
 			Thread.sleep(1000);
-			write_email();
+			WDFunctions.sendKeyForDataFromDataFile(loc.Email_compose_field,WDFunctions.st);
 
 			String act = driver.findElement(By.xpath(loc.page_title_loc)).getText(); 
 			// act is coming from Domain -- the one developer build and release

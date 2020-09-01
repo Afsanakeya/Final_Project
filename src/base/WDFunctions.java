@@ -4,7 +4,10 @@ import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 
 import java.io.BufferedReader;
@@ -16,7 +19,7 @@ import java.util.Date;
 
 public class WDFunctions {
 
-	protected WebDriver driver;
+	public static WebDriver driver;
 
 	public void getCurrentTime() {
 		SimpleDateFormat formatter = new SimpleDateFormat("MM/dd/yyyy HH:mm:ss");  
@@ -57,7 +60,6 @@ public class WDFunctions {
 		}
 
 	}
-
 	public void clickByCss (String loc){
 		try {
 			driver.findElement(By.cssSelector(loc)).click();
@@ -78,12 +80,12 @@ public class WDFunctions {
 		driver.findElement(By.name(loc)).click();
 	}
 
-	public void clickByLinkText (String loc){
+	public void clickByLinkText (String loc){  
 		driver.findElement(By.linkText(loc)).click();
 	}
 
 	//Read text file
-	public void write_email() {
+	/*public void write_email() {
 		File inFile = new File("./mail.txt");
 		StringBuilder targetString = new StringBuilder("");
 		try {
@@ -105,10 +107,43 @@ public class WDFunctions {
 		catch(Exception e) {
 			System.out.println("Unbale to find the element and unable to compose email"+e);
 		}
+	}*/
+	
+	public static final String FilePath  = "./mail.txt";
+	public static final StringBuilder st = readfile(FilePath);
+    public static StringBuilder readfile(String filePath) {
+		File inFile = new File(filePath);
+		StringBuilder DatafromDataSheet = new StringBuilder("");
+		try {
+			FileReader fr = new FileReader(inFile);
+			BufferedReader br = new BufferedReader(fr);
+
+			String s = null;
+			while ((s = br.readLine()) != null) {
+				DatafromDataSheet.append(s);
+			}
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		return DatafromDataSheet;
 	}
+	public static void sendKeyForDataFromDataFile(String xpath, StringBuilder targetString) {
+
+		try {
+			driver.findElement(By.xpath(xpath)).sendKeys(targetString);
+
+			System.out.println("Data composed successfully in text edit/text compose field");
+
+		}
+
+		catch (Exception e) {
+
+			System.out.println("Unable to write data in compose/text edit field" + e);
+		}
+	}
+
 	public void right_click_menu_selector() {
 		Actions actions = new Actions(driver);
-
 		WebElement btnElement = driver.findElement(By.xpath("//*[@id=\"mail-app-component\"]/div/div/div[2]/div/div/div[3]/div/div[1]/ul/li[3]/a/div/div[2]"));
 		actions.contextClick(btnElement).perform();
 		System.out.println("Right click Context Menu displayed");
