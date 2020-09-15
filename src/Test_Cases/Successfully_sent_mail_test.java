@@ -35,9 +35,9 @@ public class Successfully_sent_mail_test {
 			Thread.sleep(9000);
 			sendKeyForDataFromDataFile(loc.Email_compose_field,WDFunctions.st);
 			typeByXpath(loc.To_link,loc.writeTolink);
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 			typeByXpath(loc.Subject_link,loc.writesublink);
-			Thread.sleep(1000);
+			Thread.sleep(2000);
 
 			clickByXpath(loc.Send_button);
 			String act = driver.findElement(By.xpath(loc.successfully_mail_sent)).getText(); 
