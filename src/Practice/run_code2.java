@@ -1,4 +1,4 @@
-package run_code;
+package Practice;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

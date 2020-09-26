@@ -18,12 +18,12 @@ public class Successfully_delete_mail {
 
 			clickByXpath(loc.signInLinkLoc)	;
 			typeByXpath(loc.emailLoc, loc.emailValue);      
-			Thread.sleep(2000);
+			time();
 			clickByCss(loc.nextButtonLoc);
 			typeByXpath(loc.passwordLoc,loc.passValue);
 			clickByXpath(loc.nextButtonloc);
 			clickByXpath(loc.maillinkloc);
-			Thread.sleep(1000);
+			time();
 			clickByXpath(loc.sent_buttonloc);
 			right_click_menu_selector();
 

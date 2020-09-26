@@ -29,11 +29,11 @@ public class Sucessfully_compose_mail {
 			clickByXpath(loc.nextButtonloc);
             clickByXpath(loc.maillinkloc);
 			clickByXpath(loc.Composelink);
-			Thread.sleep(1000);
+			time();
             typeByXpath(loc.To_link,loc.writeTolink);
-			Thread.sleep(1000);
+			time();
 			typeByXpath(loc.Subject_link,loc.writesublink);
-			Thread.sleep(1000);
+			time();
 			WDFunctions.sendKeyForDataFromDataFile(loc.Email_compose_field,WDFunctions.st);
 			String act = driver.findElement(By.xpath(loc.page_title_loc)).getText(); 
 			// act is coming from Domain -- the one developer build and release

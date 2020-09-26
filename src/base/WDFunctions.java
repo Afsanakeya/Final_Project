@@ -84,6 +84,9 @@ public class WDFunctions {
 		driver.findElement(By.linkText(loc)).click();
 	}
 
+	public void time() throws InterruptedException {
+	Thread.sleep(2000);
+	}
 	public static final String FilePath  = "./mail.txt";
 	public static final StringBuilder st = readfile(FilePath);
 	public static StringBuilder readfile(String filePath) {

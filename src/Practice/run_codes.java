@@ -1,4 +1,4 @@
-package run_code;
+package Practice;
 
 
 import java.io.BufferedReader;

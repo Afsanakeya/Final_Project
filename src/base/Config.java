@@ -34,7 +34,7 @@ public class Config extends WDFunctions {
 
 		driver.manage().deleteAllCookies();
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(45, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(90, TimeUnit.SECONDS);
 
 		// open browser	
 		driver.get("https://www.yahoo.com/");

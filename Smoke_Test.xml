@@ -4,6 +4,7 @@
   <test name="Running Smoke suite in chrome">
     <parameter name="browser" value="ch" />
     <classes>
+      <class name="Test_Cases.Successfully_sent_mail_test"/>
       <class name="Test_Cases.Successfully_delete_mail"/>
     
     </classes>
