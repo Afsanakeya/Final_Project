@@ -14,7 +14,6 @@
         <methods>
           <include name="beforeEachTestMethod"/>
           <include name="Sucessfully_sent_mail_Test"/>
-          <include name="afterEachTestMethod"/>
           <include name="startTestSuite"/>
         </methods>
       </class> <!-- Test_Cases.Successfully_sent_mail_test$Sign_in_test -->
